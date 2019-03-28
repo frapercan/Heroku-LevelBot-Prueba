@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Company } from './company';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { HttpHeaders } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class CompanyService {
@@ -9,7 +10,7 @@ export class CompanyService {
   private companyUrl = '/api/company';
   private options = new RequestOptions({
     headers: new Headers({
-      'Authorization': 'Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvbGFAZ21haWwuY29tIiwiaWQiOiI1YzliZjZjODRmMTk2MzAwMTdhNWRlOGYiLCJleHAiOjE1NTg5MDkxMjgsImlhdCI6MTU1MzcyNTEyOH0.-05yAVESjOrPrNFX3L3WV3-zNhE5aaU7-3YfHTVZFeo'
+      'Authorization': environment.token
     })
   });
 
@@ -35,13 +36,12 @@ export class CompanyService {
       .catch(this.handleError);
   }
 
-  // get("/api/companies/:id") endpoint not used by Angular app
 
   // delete("/api/companies/:id")
-  deleteCompany(delCompanyId: String): Promise<void | String> {
+  deleteCompany(delCompanyId: string): Promise<void | string> {
     return this.http.delete(this.companyUrl + '/' + delCompanyId, this.options)
       .toPromise()
-      .then(response => response.json() as String)
+      .then(response => response.json() as string)
       .catch(this.handleError);
   }
 

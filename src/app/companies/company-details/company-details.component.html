@@ -11,16 +11,8 @@
       <input class="form-control" name="company-name" [(ngModel)]="company.name" placeholder="Name" />
     </div>
     <div class="form-group">
-      <label for="company-email">Email</label>
-      <input class="form-control" name="company-email" [(ngModel)]="company.email" placeholder="support@mlab.com" />
-    </div>
-    <div class="form-group">
-      <label for="company-phone-mobile">Mobile</label>
-      <input class="form-control" name="company-phone-mobile" [(ngModel)]="company.phone.mobile" placeholder="1234567890" />
-    </div>
-    <div class="form-group">
-      <label for="company-phone-work">Work</label>
-      <input class="form-control" name="company-phone-work" [(ngModel)]="company.phone.work" placeholder="0123456789" />
+      <label for="company-homepage_url">Homepage</label>
+      <input class="form-control" name="company-homepage_url" [(ngModel)]="company.homepage_url" placeholder="www.example.com" />
     </div>
     <button class="btn btn-primary" *ngIf="!company._id" (click)="createCompany(company)">Create</button>
     <button class="btn btn-info" *ngIf="company._id" (click)="updateCompany(company)">Update</button>

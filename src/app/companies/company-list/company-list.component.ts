@@ -12,8 +12,8 @@ import { CompanyDetailsComponent } from '../company-details/company-details.comp
 
 export class CompanyListComponent implements OnInit {
 
-  companies: Company[];
-  selectedCompany: Company;
+  companies: Company[]
+  selectedCompany: Company
 
   constructor(private companyService: CompanyService) { }
 
@@ -22,34 +22,33 @@ export class CompanyListComponent implements OnInit {
       .getCompanies()
       .then((companies: Company[]) => {
         this.companies = companies.map((company) => {
-
           return company;
         });
       });
   }
 
-  private getIndexOfCompany = (companyId: String) => {
+  private getIndexOfCompany = (companyId) => {
     return this.companies.findIndex((company) => {
       return company._id === companyId;
     });
   }
 
-  selectCompany(company: Company) {
+  selectCompany(company: Company | null) {
     this.selectedCompany = company;
   }
 
   createNewCompany() {
-    const company: Company = {
+    var company: Company = {
       name: '',
-      permalink: '',
+      homepage_url: ''
     };
 
-    // By default, a newly-created company will have the selected state.
+    // By default, a newly-created contact will have the selected state.
     this.selectCompany(company);
   }
 
-  deleteCompany = (companyId: String) => {
-    const idx = this.getIndexOfCompany(companyId);
+  deleteCompany = (company: String) => {
+    var idx = this.getIndexOfCompany(company._id);
     if (idx !== -1) {
       this.companies.splice(idx, 1);
       this.selectCompany(null);
@@ -63,8 +62,8 @@ export class CompanyListComponent implements OnInit {
     return this.companies;
   }
 
-  updateCompany = (company: Company) => {
-    const idx = this.getIndexOfCompany(company._id);
+  updateContact = (company: Company) => {
+    var idx = this.getIndexOfCompany(company._id);
     if (idx !== -1) {
       this.companies[idx] = company;
       this.selectCompany(company);

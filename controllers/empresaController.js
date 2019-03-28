@@ -10,8 +10,9 @@ exports.getEmpresas = async (req, reply) =>
 {
     try {
         const empresas = await Empresa.find({},'id name homepage_url')
-        reply.send(empresas)
-        
+      reply.send(empresas)
+
+
   } catch (err) {
         reply.send(err)
   }
@@ -21,7 +22,6 @@ exports.getEmpresas = async (req, reply) =>
 exports.getSingleEmpresa = async (req, reply) => {
     try {
         const id = req.params.id
-        console.log(id)
         const empresa = await Empresa.findById(mongoose.Types.ObjectId(id))
         reply.send(empresa)
   } catch (err) {
@@ -46,7 +46,6 @@ exports.getSingleEmpresaMembers = async (req, reply) => {
         const id = req.params.id
         const empresa = await Empresa.findById(mongoose.Types.ObjectId(id),
             'relationships.is_past relationships.person.first_name relationships.person.last_name relationships.title')
-        console.log(empresa.relationships)
         empresa.relationships = empresa.relationships.filter(relationship => !relationship.is_past)
         reply.send(empresa)
     } catch (err) {
@@ -58,7 +57,9 @@ exports.getSingleEmpresaMembers = async (req, reply) => {
 exports.addEmpresa = async (req, reply) => {
   try {
     const empresa = new Empresa(req.body)
-    reply.send(empresa.save())
+    empresa.save();
+
+    reply.send(empresa)
   } catch (err) {
         return reply.send(err)
   }
@@ -68,7 +69,6 @@ exports.addEmpresa = async (req, reply) => {
 exports.addEmpresaProduct = async (req, reply) => {
     try {
         const id = req.params.id
-        console.log(id)
         const empresa = await Empresa.findById(mongoose.Types.ObjectId(id))
         empresa.products = req.body;
         reply.send(empresa.save())

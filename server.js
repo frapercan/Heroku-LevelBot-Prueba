@@ -9,7 +9,9 @@ const mongoose = require('mongoose');
 var app = express();
 app.use(bodyParser.json());
 
-var distDir = __dirname + "/dist/";
+
+var distDir = __dirname + "/dist/"; //Remember to change this.
+console.log(distDir);
 app.use(express.static(distDir));
 
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
@@ -48,7 +50,7 @@ const swaggerUi = require('swagger-ui-express');
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 // Connect to the database before starting the application server.
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/mydb", option = { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mydb", option = { useNewUrlParser: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 mongoose.set('debug', true);

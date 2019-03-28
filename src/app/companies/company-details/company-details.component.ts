@@ -33,8 +33,8 @@ export class CompanyDetailsComponent {
     });
   }
 
-  deleteCompany(companyId: String): void {
-    this.companyService.deleteCompany(companyId).then((deletedCompanyId: String) => {
+  deleteCompany(companyId: string): void {
+    this.companyService.deleteCompany(companyId).then((deletedCompanyId: string) => {
       this.deleteHandler(deletedCompanyId);
     });
   }
