@@ -5,7 +5,6 @@ const session = require('express-session');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-var CONTACTS_COLLECTION = "contacts";
 
 var app = express();
 app.use(bodyParser.json());
@@ -66,7 +65,6 @@ require('./models/Users');
 require('./config/passport');
 app.use(require('./routes'));
 
-// CONTACTS API ROUTES BELOW
 
 // Generic error handler used by all endpoints.
 function handleError(res, reason, message, code) {
