@@ -47,7 +47,7 @@ export class CompanyListComponent implements OnInit {
     this.selectCompany(company);
   }
 
-  deleteCompany = (company: String) => {
+  deleteCompany = (company: Company) => {
     var idx = this.getIndexOfCompany(company._id);
     if (idx !== -1) {
       this.companies.splice(idx, 1);
