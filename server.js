@@ -10,7 +10,7 @@ var app = express();
 app.use(bodyParser.json());
 
 
-var distDir = __dirname + "/dist/"; //Remember to change this.
+var distDir = __dirname + "/dist";
 console.log(distDir);
 app.use(express.static(distDir));
 

@@ -17,5 +17,11 @@
     <button class="btn btn-primary" *ngIf="!company._id" (click)="createCompany(company)">Create</button>
     <button class="btn btn-info" *ngIf="company._id" (click)="updateCompany(company)">Update</button>
     <button class="btn btn-danger" *ngIf="company._id" (click)="deleteCompany(company._id)">Delete</button>
+    <button class="btn btn-primary" *ngIf="company._id" (click)="getCompanyProducts(company._id)">Products</button>
   </form>
+
+</div>
+<div class = "jumbotron" *ngIf="products"><h2>amount of products:{{products.products.length}}</h2>
+  <div *ngFor="let x of products.products">{{x.name}}</div>
+
 </div>

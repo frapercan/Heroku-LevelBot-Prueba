@@ -18,13 +18,22 @@ export class CompanyService {
 
   constructor(private http: Http) {
 
-   }
+  }
 
   // get("/api/companies")
   getCompanies(): Promise<void | Company[]> {
     return this.http.get(this.companiesUrl, this.options)
       .toPromise()
       .then(response => response.json() as Company[])
+      .catch(this.handleError);
+  }
+
+
+  // get("/api/companies/:id/products")
+  getCompanyProducts(companyId: string): Promise<void | string> {
+    return this.http.get(this.companyUrl + '/' + companyId + '/products', this.options)
+      .toPromise()
+      .then(response => response.json() as string)
       .catch(this.handleError);
   }
 

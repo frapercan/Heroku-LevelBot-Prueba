@@ -18,8 +18,13 @@ export class CompanyDetailsComponent {
   updateHandler: Function;
   @Input()
   deleteHandler: Function;
+  @Input()
+  productsHandler: Function;
 
-  constructor(private companyService: CompanyService) {}
+  products: any;
+
+
+  constructor(private companyService: CompanyService) { }
 
   createCompany(company: Company) {
     this.companyService.createCompany(company).then((newCompany: Company) => {
@@ -36,6 +41,12 @@ export class CompanyDetailsComponent {
   deleteCompany(companyId: string): void {
     this.companyService.deleteCompany(companyId).then((deletedCompanyId: string) => {
       this.deleteHandler(deletedCompanyId);
+    });
+  }
+  getCompanyProducts(companyId: string): void {
+    this.companyService.getCompanyProducts(companyId).then((companyProducts) => {
+      this.productsHandler(companyProducts);
+      this.products = companyProducts;
     });
   }
 }

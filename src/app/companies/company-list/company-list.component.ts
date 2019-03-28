@@ -14,6 +14,7 @@ export class CompanyListComponent implements OnInit {
 
   companies: Company[]
   selectedCompany: Company
+  products: any
 
   constructor(private companyService: CompanyService) { }
 
@@ -54,6 +55,11 @@ export class CompanyListComponent implements OnInit {
       this.selectCompany(null);
     }
     return this.companies;
+  }
+
+  getCompanyProducts = (products) => {
+
+    return products;
   }
 
   addCompany = (company: Company) => {

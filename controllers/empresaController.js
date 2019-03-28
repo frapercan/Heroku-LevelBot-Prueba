@@ -33,8 +33,8 @@ exports.getSingleEmpresa = async (req, reply) => {
 exports.getSingleEmpresaProducts = async (req, reply) => {
     try {
         const id = req.params.id
-        const empresa = await Empresa.findById(mongoose.Types.ObjectId(id), 'products.name')
-        reply.send(empresa)
+        const products = await Empresa.findById(mongoose.Types.ObjectId(id), 'products.name')
+        reply.send(products)
     } catch (err) {
         return reply.send(err)
     }
