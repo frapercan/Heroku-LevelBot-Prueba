@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "ceccea01-aa10-471f-adf4-e8172e9728f1",
+		"name": "Prueba técnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Devuelve Empresas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/companies",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Devuelve Empresa",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvbGFAZ21haWwuY29tIiwiaWQiOiI1YzlhOWI2ZDcxNzk5NjcyYTRjNjRhM2IiLCJleHAiOjE1NTg4MTY2MDYsImlhdCI6MTU1MzYzNjIwNn0.tUmZcajd9ur1oaB_RAKo_xVk3ipQ5exJa7nUBttc5y0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/company/123123",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"company",
+						"123123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Devuelve Miembros de Empresa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/company/:id/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"company",
+						":id",
+						"products"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "52cdef7c4bab8bd675297d8b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Devuelve Productos de Empresa",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvbGFAZ21haWwuY29tIiwiaWQiOiI1YzlhOWI2ZDcxNzk5NjcyYTRjNjRhM2IiLCJleHAiOjE1NTg4MTY2MDYsImlhdCI6MTU1MzYzNjIwNn0.tUmZcajd9ur1oaB_RAKo_xVk3ipQ5exJa7nUBttc5y0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/company/:id/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"company",
+						":id",
+						"products"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "52cdef7c4bab8bd675297d9d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Empresa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvbGFAZ21haWwuY29tIiwiaWQiOiI1YzlhOWI2ZDcxNzk5NjcyYTRjNjRhM2IiLCJleHAiOjE1NTg4MTY2MDYsImlhdCI6MTU1MzYzNjIwNn0.tUmZcajd9ur1oaB_RAKo_xVk3ipQ5exJa7nUBttc5y0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {  \n      \"name\":\"WetpaindfgdfgtWetpaindfgdfgtWetpaindfgdfgtWetpaindfgdfgtWetpaindfgdfgtWetpaindfgdfgtWetpaindfgdfgtWetpaindfgdfgtWetpaindfgdfgtWetpaindfgdfgtWetpaindfgdfgtWetpaindfg\"\n   }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/company",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Añadir Producto a Empresa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvbGFAZ21haWwuY29tIiwiaWQiOiI1YzlhOWI2ZDcxNzk5NjcyYTRjNjRhM2IiLCJleHAiOjE1NTg4MTY2MDYsImlhdCI6MTU1MzYzNjIwNn0.tUmZcajd9ur1oaB_RAKo_xVk3ipQ5exJa7nUBttc5y0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n        [ {  \n            \"name\":\"Wikison Wetpainsdfffffffffffffffffffffffft\",\n            \"permalink\":\"wetpaint-wiki\"\n         },\n         {  \n            \"name\":\"Wetpaint Social Distribution System\",\n            \"permalink\":\"wetpaint-social-distribution-system\"\n         }\n]"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/company/:id/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"company",
+						":id",
+						"products"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "52cdef7c4bab8bd675297d9a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Empresa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvbGFAZ21haWwuY29tIiwiaWQiOiI1YzlhOWI2ZDcxNzk5NjcyYTRjNjRhM2IiLCJleHAiOjE1NTg4MTY2MDYsImlhdCI6MTU1MzYzNjIwNn0.tUmZcajd9ur1oaB_RAKo_xVk3ipQ5exJa7nUBttc5y0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {  \n      \"name\":\"dfgdfgdfgdgfg\",\n      \"permalink\":\"abc223tdfkjgjkdfg3\",\n      \"crunchbase_url\":\"http://www.crunchbase.com/company/wetpaint\",\n      \"homepage_url\":\"http://wetpaint-inc.com\",\n      \"blog_url\":\"http://digitalquarters.net/\",\n      \"blog_feed_url\":\"http://digitalquarters.net/feed/\",\n      \"twitter_username\":\"BachelrWetpaint\",\n      \"category_code\":\"web\",\n      \"number_of_employees\":47,\n      \"founded_year\":2005,\n      \"founded_month\":10,\n      \"founded_day\":17,\n      \"deadpooled_year\":1,\n      \"tag_list\":\"wiki, seattle, elowitz, media-industry, media-platform, social-distribution-system\",\n      \"alias_list\":\"\",\n      \"email_address\":\"info@wetpaint.com\",\n      \"phone_number\":\"206.859.6300\",\n      \"description\":\"Technology Platform Company\",\n      \"created_at\":{  \n         \"date\":1180075887000\n      },\n      \"updated_at\":\"Sun Dec 08 07:15:44 UTC 2013\",\n      \"overview\":\"<p>Wetpaint is a technology platform company that uses its proprietary state-of-the-art technology and expertise in social media to build and monetize audiences for digital publishers. Wetpaint’s own online property, Wetpaint Entertainment, an entertainment news site that attracts more than 12 million unique visitors monthly and has over 2 million Facebook fans, is a proof point to the company’s success in building and engaging audiences. Media companies can license Wetpaint’s platform which includes a dynamic playbook tailored to their individual needs and comprehensive training. Founded by Internet pioneer Ben Elowitz, and with offices in New York and Seattle, Wetpaint is backed by Accel Partners, the investors behind Facebook.</p>\",\n      \"image\":{  \n         \"available_sizes\":[  \n            [  ],\n            [  ],\n            [  ]\n         ]\n      },\n      \"products\":[  \n         {  \n            \"name\":\"Wikison Wetpaint\",\n            \"permalink\":\"wetpaint-wiki\"\n         },\n         {  \n            \"name\":\"Wetpaint Social Distribution System\",\n            \"permalink\":\"wetpaint-social-distribution-system\"\n         }\n      ],\n      \"relationships\":[  \n         {  \n            \"is_past\":false,\n            \"title\":\"Co-Founder and VP, Social and Audience Development\",\n            \"person\":{  \n               \"first_name\":\"Michael\",\n               \"last_name\":\"Howell\",\n               \"permalink\":\"michael-howell\"\n            }\n         },\n         {  \n            \"is_past\":false,\n            \"title\":\"Co-Founder/CEO/Board of Directors\",\n            \"person\":{  \n               \"first_name\":\"Ben\",\n               \"last_name\":\"Elowitz\",\n               \"permalink\":\"ben-elowitz\"\n            }\n         },\n         {  \n            \"is_past\":false,\n            \"title\":\"COO/Board of Directors\",\n            \"person\":{  \n               \"first_name\":\"Rob\",\n               \"last_name\":\"Grady\",\n               \"permalink\":\"rob-grady\"\n            }\n         },\n         {  \n            \"is_past\":false,\n            \"title\":\"SVP, Strategy and Business Development\",\n            \"person\":{  \n               \"first_name\":\"Chris\",\n               \"last_name\":\"Kollas\",\n               \"permalink\":\"chris-kollas\"\n            }\n         },\n         {  \n            \"is_past\":false,\n            \"title\":\"Board\",\n            \"person\":{  \n               \"first_name\":\"Theresia\",\n               \"last_name\":\"Ranzetta\",\n               \"permalink\":\"theresia-ranzetta\"\n            }\n         },\n         {  \n            \"is_past\":false,\n            \"title\":\"Board Member\",\n            \"person\":{  \n               \"first_name\":\"Gus\",\n               \"last_name\":\"Tai\",\n               \"permalink\":\"gus-tai\"\n            }\n         },\n         {  \n            \"is_past\":false,\n            \"title\":\"Board\",\n            \"person\":{  \n               \"first_name\":\"Len\",\n               \"last_name\":\"Jordan\",\n               \"permalink\":\"len-jordan\"\n            }\n         },\n         {  \n            \"is_past\":false,\n            \"title\":\"Head of Technology and Product\",\n            \"person\":{  \n               \"first_name\":\"Alex\",\n               \"last_name\":\"Weinstein\",\n               \"permalink\":\"alex-weinstein\"\n            }\n         },\n         {  \n            \"is_past\":true,\n            \"title\":\"CFO\",\n            \"person\":{  \n               \"first_name\":\"Bert\",\n               \"last_name\":\"Hogue\",\n               \"permalink\":\"bert-hogue\"\n            }\n         },\n         {  \n            \"is_past\":true,\n            \"title\":\"CFO/ CRO\",\n            \"person\":{  \n               \"first_name\":\"Brian\",\n               \"last_name\":\"Watkins\",\n               \"permalink\":\"brian-watkins\"\n            }\n         },\n         {  \n            \"is_past\":true,\n            \"title\":\"Senior Vice President, Marketing\",\n            \"person\":{  \n               \"first_name\":\"Rob\",\n               \"last_name\":\"Grady\",\n               \"permalink\":\"rob-grady\"\n            }\n         },\n         {  \n            \"is_past\":true,\n            \"title\":\"VP, Technology and Product\",\n            \"person\":{  \n               \"first_name\":\"Werner\",\n               \"last_name\":\"Koepf\",\n               \"permalink\":\"werner-koepf\"\n            }\n         },\n         {  \n            \"is_past\":true,\n            \"title\":\"VP Marketing\",\n            \"person\":{  \n               \"first_name\":\"Kevin\",\n               \"last_name\":\"Flaherty\",\n               \"permalink\":\"kevin-flaherty\"\n            }\n         },\n         {  \n            \"is_past\":true,\n            \"title\":\"VP User Experience\",\n            \"person\":{  \n               \"first_name\":\"Alex\",\n               \"last_name\":\"Berg\",\n               \"permalink\":\"alex-berg\"\n            }\n         },\n         {  \n            \"is_past\":true,\n            \"title\":\"VP Engineering\",\n            \"person\":{  \n               \"first_name\":\"Steve\",\n               \"last_name\":\"McQuade\",\n               \"permalink\":\"steve-mcquade\"\n            }\n         },\n         {  \n            \"is_past\":true,\n            \"title\":\"Executive Editor\",\n            \"person\":{  \n               \"first_name\":\"Susan\",\n               \"last_name\":\"Mulcahy\",\n               \"permalink\":\"susan-mulcahy\"\n            }\n         },\n         {  \n            \"is_past\":true,\n            \"title\":\"VP Business Development\",\n            \"person\":{  \n               \"first_name\":\"Chris\",\n               \"last_name\":\"Kollas\",\n               \"permalink\":\"chris-kollas\"\n            }\n         }\n      ],\n      \"competitions\":[  \n         {  \n            \"competitor\":{  \n               \"name\":\"Wikia\",\n               \"permalink\":\"wikia\"\n            }\n         },\n         {  \n            \"competitor\":{  \n               \"name\":\"JotSpot\",\n               \"permalink\":\"jotspot\"\n            }\n         },\n         {  \n            \"competitor\":{  \n               \"name\":\"Socialtext\",\n               \"permalink\":\"socialtext\"\n            }\n         },\n         {  \n            \"competitor\":{  \n               \"name\":\"Ning by Glam Media\",\n               \"permalink\":\"ning\"\n            }\n         },\n         {  \n            \"competitor\":{  \n               \"name\":\"Soceeo\",\n               \"permalink\":\"soceeo\"\n            }\n         },\n         {  \n            \"competitor\":{  \n               \"name\":\"Yola\",\n               \"permalink\":\"yola\"\n            }\n         },\n         {  \n            \"competitor\":{  \n               \"name\":\"SocialGO\",\n               \"permalink\":\"socialgo\"\n            }\n         },\n         {  \n            \"competitor\":{  \n               \"name\":\"IslamNor\",\n               \"permalink\":\"islamnor\"\n            }\n         }\n      ],\n      \"providerships\":[  \n\n      ],\n      \"total_money_raised\":\"$39.8M\",\n      \"funding_rounds\":[  \n         {  \n            \"id\":888,\n            \"round_code\":\"a\",\n            \"source_url\":\"http://seattlepi.nwsource.com/business/246734_wiki02.html\",\n            \"source_description\":\"\",\n            \"raised_amount\":5250000,\n            \"raised_currency_code\":\"USD\",\n            \"funded_year\":2005,\n            \"funded_month\":10,\n            \"funded_day\":1,\n            \"investments\":[  \n               {  \n                  \"company\":null,\n                  \"financial_org\":{  \n                     \"name\":\"Frazier Technology Ventures\",\n                     \"permalink\":\"frazier-technology-ventures\"\n                  },\n                  \"person\":null\n               },\n               {  \n                  \"company\":null,\n                  \"financial_org\":{  \n                     \"name\":\"Trinity Ventures\",\n                     \"permalink\":\"trinity-ventures\"\n                  },\n                  \"person\":null\n               }\n            ]\n         },\n         {  \n            \"id\":889,\n            \"round_code\":\"b\",\n            \"source_url\":\"http://pulse2.com/2007/01/09/wiki-builder-website-wetpaint-welcomes-95m-funding/\",\n            \"source_description\":\"\",\n            \"raised_amount\":9500000,\n            \"raised_currency_code\":\"USD\",\n            \"funded_year\":2007,\n            \"funded_month\":1,\n            \"funded_day\":1,\n            \"investments\":[  \n               {  \n                  \"company\":null,\n                  \"financial_org\":{  \n                     \"name\":\"Accel Partners\",\n                     \"permalink\":\"accel-partners\"\n                  },\n                  \"person\":null\n               },\n               {  \n                  \"company\":null,\n                  \"financial_org\":{  \n                     \"name\":\"Frazier Technology Ventures\",\n                     \"permalink\":\"frazier-technology-ventures\"\n                  },\n                  \"person\":null\n               },\n               {  \n                  \"company\":null,\n                  \"financial_org\":{  \n                     \"name\":\"Trinity Ventures\",\n                     \"permalink\":\"trinity-ventures\"\n                  },\n                  \"person\":null\n               }\n            ]\n         },\n         {  \n            \"id\":2312,\n            \"round_code\":\"c\",\n            \"source_url\":\"http://www.accel.com/news/news_one_up.php?news_id=185\",\n            \"source_description\":\"Accel\",\n            \"raised_amount\":25000000,\n            \"raised_currency_code\":\"USD\",\n            \"funded_year\":2008,\n            \"funded_month\":5,\n            \"funded_day\":19,\n            \"investments\":[  \n               {  \n                  \"company\":null,\n                  \"financial_org\":{  \n                     \"name\":\"DAG Ventures\",\n                     \"permalink\":\"dag-ventures\"\n                  },\n                  \"person\":null\n               },\n               {  \n                  \"company\":null,\n                  \"financial_org\":{  \n                     \"name\":\"Accel Partners\",\n                     \"permalink\":\"accel-partners\"\n                  },\n                  \"person\":null\n               },\n               {  \n                  \"company\":null,\n                  \"financial_org\":{  \n                     \"name\":\"Trinity Ventures\",\n                     \"permalink\":\"trinity-ventures\"\n                  },\n                  \"person\":null\n               },\n               {  \n                  \"company\":null,\n                  \"financial_org\":{  \n                     \"name\":\"Frazier Technology Ventures\",\n                     \"permalink\":\"frazier-technology-ventures\"\n                  },\n                  \"person\":null\n               }\n            ]\n         }\n      ],\n      \"investments\":[  \n\n      ],\n      \"acquisition\":{  \n         \"price_amount\":30000000,\n         \"price_currency_code\":\"USD\",\n         \"term_code\":\"cash_and_stock\",\n         \"source_url\":\"http://allthingsd.com/20131216/viggle-tries-to-bulk-up-its-social-tv-business-by-buying-wetpaint/?mod=atdtweet\",\n         \"source_description\":\" Viggle Tries to Bulk Up Its Social TV Business by Buying Wetpaint\",\n         \"acquired_year\":2013,\n         \"acquired_month\":12,\n         \"acquired_day\":16,\n         \"acquiring_company\":{  \n            \"name\":\"Viggle\",\n            \"permalink\":\"viggle\"\n         }\n      },\n      \"acquisitions\":[  \n\n      ],\n      \"offices\":[  \n         {  \n            \"description\":\"\",\n            \"address1\":\"710 - 2nd Avenue\",\n            \"address2\":\"Suite 1100\",\n            \"zip_code\":\"98104\",\n            \"city\":\"Seattle\",\n            \"state_code\":\"WA\",\n            \"country_code\":\"USA\",\n            \"latitude\":47.603122,\n            \"longitude\":-122.333253\n         },\n         {  \n            \"description\":\"\",\n            \"address1\":\"270 Lafayette Street\",\n            \"address2\":\"Suite 505\",\n            \"zip_code\":\"10012\",\n            \"city\":\"New York\",\n            \"state_code\":\"NY\",\n            \"country_code\":\"USA\",\n            \"latitude\":40.7237306,\n            \"longitude\":-73.9964312\n         }\n      ],\n      \"milestones\":[  \n         {  \n            \"id\":5869,\n            \"description\":\"Wetpaint named in Lead411's Hottest Seattle Companies list\",\n            \"stoned_year\":2010,\n            \"stoned_month\":6,\n            \"stoned_day\":8,\n            \"source_url\":\"http://www.lead411.com/seattle-companies.html\",\n            \"source_text\":null,\n            \"source_description\":\"LEAD411 LAUNCHES \\\"HOTTEST SEATTLE COMPANIES\\\" AWARDS\",\n            \"stoneable_type\":\"Company\",\n            \"stoned_value\":null,\n            \"stoned_value_type\":null,\n            \"stoned_acquirer\":null,\n            \"stoneable\":{  \n               \"name\":\"Wetpaint\",\n               \"permalink\":\"wetpaint\"\n            }\n         },\n         {  \n            \"id\":8702,\n            \"description\":\"Site-Builder Wetpaint Makes One For Itself, Using the Demand Media Playbook\",\n            \"stoned_year\":2010,\n            \"stoned_month\":9,\n            \"stoned_day\":6,\n            \"source_url\":\"http://mediamemo.allthingsd.com/20100906/site-builder-wetpaint-makes-one-for-itself-using-the-demand-media-playbook/\",\n            \"source_text\":null,\n            \"source_description\":\"All Things D\",\n            \"stoneable_type\":\"Company\",\n            \"stoned_value\":null,\n            \"stoned_value_type\":null,\n            \"stoned_acquirer\":null,\n            \"stoneable\":{  \n               \"name\":\"Wetpaint\",\n               \"permalink\":\"wetpaint\"\n            }\n         }\n      ],\n      \"video_embeds\":[  \n\n      ],\n      \"screenshots\":[  \n         {  \n            \"available_sizes\":[  \n               [  \n                  [  \n                     150,\n                     86\n                  ],\n                  \"assets/images/resized/0016/0929/160929v2-max-150x150.png\"\n               ],\n               [  \n                  [  \n                     250,\n                     143\n                  ],\n                  \"assets/images/resized/0016/0929/160929v2-max-250x250.png\"\n               ],\n               [  \n                  [  \n                     450,\n                     258\n                  ],\n                  \"assets/images/resized/0016/0929/160929v2-max-450x450.png\"\n               ]\n            ],\n            \"attribution\":null\n         }\n      ],\n      \"external_links\":[  \n         {  \n            \"external_url\":\"http://www.geekwire.com/2011/rewind-ben-elowitz-wetpaint-ceo-building-type-media-company\",\n            \"title\":\"GeekWire interview: Rewind - Ben Elowitz, Wetpaint CEO, on building a new type of media company\"\n         },\n         {  \n            \"external_url\":\"http://techcrunch.com/2012/06/17/search-and-social-how-two-will-soon-become-one/\",\n            \"title\":\"Guest post by CEO Ben Elowitz in TechCrunch\"\n         },\n         {  \n            \"external_url\":\"http://allthingsd.com/20120516/what-to-expect-when-facebook-is-expecting-five-predictions-for-facebooks-first-public-year/\",\n            \"title\":\"Guest post by CEO Ben Elowitz in AllThingsD\"\n         },\n         {  \n            \"external_url\":\"http://adage.com/article/digitalnext/facebook-biggest-player-advertising-s-540-billion-world/235708/\",\n            \"title\":\"Guest post by CEO Ben Elowitz in AdAge\"\n         },\n         {  \n            \"external_url\":\"http://www.businessinsider.com/facebook-captures-14-percent-of-our-online-attention-but-only-4-percent-of-ad-spending-online-2012-6\",\n            \"title\":\"Guest post by CEO Ben Elowitz in Business Insider\"\n         },\n         {  \n            \"external_url\":\"http://allfacebook.com/wetpaint-media-data_b75963\",\n            \"title\":\"AllFacebook coverage of Wetpaint\"\n         },\n         {  \n            \"external_url\":\"http://adage.com/article/digital/celeb-site-wetpaint-shows-media-profit-facebook/237828/\",\n            \"title\":\"Profile of Wetpaint in Ad Age\"\n         },\n         {  \n            \"external_url\":\"http://allthingsd.com/20121018/how-to-boost-your-facebook-traffic-tips-and-tricks-from-wetpaint/\",\n            \"title\":\"Interview with Wetpaint CEO Ben Elowitz in All Things D\"\n         },\n         {  \n            \"external_url\":\"http://www.xconomy.com/seattle/2012/10/19/wetpaint-starts-licensing-its-facebook-based-media-distribution-tech/\",\n            \"title\":\"Profile of Wetpaint in Xconomy\"\n         }\n      ],\n      \"partners\":[  \n\n      ]\n   }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/company/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"company",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "52cdef7c4bab8bd675297d94"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Empresa",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvbGFAZ21haWwuY29tIiwiaWQiOiI1YzlhOWI2ZDcxNzk5NjcyYTRjNjRhM2IiLCJleHAiOjE1NTg4MTY2MDYsImlhdCI6MTU1MzYzNjIwNn0.tUmZcajd9ur1oaB_RAKo_xVk3ipQ5exJa7nUBttc5y0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {  \n      \"_Id\":\"52cdef7c4bab8bd675297da1\",\n      \"name\":\"Wetpai2sdfnt\",\n      \"permalink\":\"abc2\"\n   }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/company/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"company",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "52cdef7c4bab8bd675297da1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear usuario /token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\": {\n\t\t\"email\":\"hola@gmail.com\",\n\t\t\"password\":\"test\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
