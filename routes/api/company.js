@@ -78,7 +78,7 @@ router.post(
  *       - company
  */
 router.post(
-  '/company/:id/producto', auth.required,
+  '/company/:id/products', auth.required,
   empresaController.addEmpresaProduct
 );
 

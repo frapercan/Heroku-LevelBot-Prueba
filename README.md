@@ -2,7 +2,6 @@
 # levelbot-prueba-tecnica
 Creación de una API para la consulta de información estructurada.
 
-Node.js authentification using Passport.js
 
 ### Prerequisitos
 
@@ -17,60 +16,53 @@ Node.js authentification using Passport.js
 npm i
 ```
 
-### Lanzar la aplicación
+### Lanzar la aplicación en desarrollo
 
 ```
-npm start || nodemon app.js 
+ng build --watch
+nodemon serve
 ```
 
-### Poblar la base de datos
+### Despliegue en Heroku
+
+```
+sudo git push heroku master
+```
+
+### Poblar la base de datos en local y en Heroku.
 
 ```
 mongoimport --db mydb --collection empresas --file datos_empresas.json --jsonArray
+
+mongoimport -h direccionBD:puertoBD -d nombreHerokuBD -c 'empresas' -u 'user' -p 'password'  --file ./datos_empresas.json --jsonArray   
 
 ```
 
 ## Acceso a la documentación:
 ```
 http://host:port/api-docs/
+https://agile-headland-68634.herokuapp.com/api-docs/
+```
+
+## Colleción de Postman para realizar pruebas
+```
+Se encuentra en la carpeta Postman y se ha exportado para la versión 2.1, las peticiones ya incluyen un Token válido.
+
 ```
 
 
-# README AUTOGENERADO POR ANGULAR
 
 
-# LevelbotPT
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-
-## Authentification Author
+## Authentification with passport.js Documentation
 
 * **Antonio Erdeljac** - *Initial work* - [Passport-Tutorial](https://github.com/AntonioErdeljac/Blog-Tutorial)
+
+## Heroku Documentation
+
+* **Heroku team** - *Create a Web App and RESTful API Server Using the MEAN Stack* - [Heroku MEAN stack tutorial](https://devcenter.heroku.com/articles/mean-apps-restful-api#implement-the-api-endpoints)
+
+
 
 
 
