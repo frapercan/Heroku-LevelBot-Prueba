@@ -44,7 +44,6 @@ export class CompanyListComponent implements OnInit {
       homepage_url: ''
     };
 
-    // By default, a newly-created contact will have the selected state.
     this.selectCompany(company);
   }
 
@@ -68,7 +67,7 @@ export class CompanyListComponent implements OnInit {
     return this.companies;
   }
 
-  updateContact = (company: Company) => {
+  updateCompany = (company: Company) => {
     var idx = this.getIndexOfCompany(company._id);
     if (idx !== -1) {
       this.companies[idx] = company;
