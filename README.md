@@ -51,9 +51,6 @@ Se encuentra en la carpeta Postman y se ha exportado para la versión 2.1, las p
 ```
 
 
-
-
-
 ## Authentification with passport.js Documentation
 
 * **Antonio Erdeljac** - *Initial work* - [Passport-Tutorial](https://github.com/AntonioErdeljac/Blog-Tutorial)
@@ -65,4 +62,13 @@ Se encuentra en la carpeta Postman y se ha exportado para la versión 2.1, las p
 
 
 
+## Posibles mejoras:
+- Añadir tranducciones
+- Sistema de Login
+- Rellenar la documentación de la API, e integrar la seguridad en esta.
+- Meter todos los componenetes de angular dentro de la carpeta componentes.
+- Crear tests y añadirlos a la integración continua.
+- Correcta configuración del entorno de producción y desarrollo.
+- Ordenación y filtros
+- Gráficos y estádisticas
 
